@@ -1,0 +1,238 @@
+
+/* ---------- Common Styles ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #111;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0 0 24px;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 0 0 25px;
+}
+
+h3 {
+    font-size: 15px;
+    margin: 0 0 15px;
+}
+
+p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #666;
+    margin: 0 0 18px;
+}
+
+.orange-highlight {
+    color: #f5a623;
+}
+
+
+/* ---------- Common Section Layout ---------- */
+
+.top-banner,
+.middle-banner {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+    padding: 30px 7%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.half-width {
+    width: 50%;
+    min-width: 0;
+}
+
+.text-content {
+    padding: 0;
+}
+
+.image-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* ---------- First Section ---------- */
+
+.top-banner {
+    background-image: url("image/fifth1.png");
+    background-position: left top;
+}
+
+.top-banner .text-content {
+    flex: 1;
+}
+
+.top-banner .image-content {
+    flex: 0 1 45%;
+}
+
+.top-banner .text-content h1:nth-child(2) {
+    white-space: nowrap;
+}
+
+
+/* ---------- Hire Me / Download Button ---------- */
+
+.link-button {
+    display: inline-block;
+    text-decoration: none;
+    background-image: linear-gradient(
+        75deg,
+        lightsalmon,
+        tomato
+    );
+    padding: 10px 22px;
+    border-radius: 3px;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+
+/* ---------- Second Section ---------- */
+
+.middle-banner {
+    background-image: url("image/fifth4.png");
+    background-position: right center;
+}
+
+.middle-banner .image-content {
+    flex: 0 1 45%;
+}
+
+.middle-banner .text-content {
+    flex: 1;
+}
+
+
+/* ---------- Experience Section ---------- */
+
+.experience-area {
+    min-height: 550px;
+    padding: 55px 7% 20px;
+    background-image: url("image/image6.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 80%;
+}
+
+.experience-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 5%;
+}
+
+.single-Experiment {
+    flex: 1;
+    min-width: 0;
+    min-height: 300px;
+    padding: 35px 25px;
+    background-color: white;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.20);
+    border-radius: 4px;
+    border-left: 7px solid transparent;
+}
+
+.single-Experiment h2 {
+    font-size: 26px;
+}
+
+.single-Experiment h3 {
+    line-height: 1.5;
+}
+
+#full-stack {
+    border-image: linear-gradient(
+        180deg,
+        lightsalmon,
+        tomato
+    ) 1;
+}
+
+#baby-web {
+    border-image: linear-gradient(
+        180deg,
+        blue,
+        cyan
+    ) 1;
+}
+
+
+/* ---------- Footer ---------- */
+
+.experience-area footer {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.experience-area footer p {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 768px) {
+
+    .top-banner,
+    .middle-banner {
+        flex-direction: column;
+        gap: 30px;
+        padding: 45px 6%;
+        background-size: auto 35%;
+    }
+
+    .half-width,
+    .top-banner .text-content,
+    .top-banner .image-content,
+    .middle-banner .text-content,
+    .middle-banner .image-content {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .top-banner .text-content h1:nth-child(2) {
+        white-space: normal;
+    }
+
+    .experience-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .single-Experiment {
+        min-height: auto;
+    }
+
+    .experience-area {
+        padding: 40px 6%;
+    }
+
+    .experience-area footer {
+        margin-top: 50px;
+    }
+}
